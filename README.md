@@ -1,4 +1,4 @@
-# Workshop22-23
+# Workshop23-24
 
 This is a simple introduction to [Django](https://www.djangoproject.com/) projects.
 
@@ -10,7 +10,7 @@ Things you'll need:
 - [Pillow](https://python-pillow.org/)
 
 
-## What you need to do
+## What you need to do - first manipulation
 
 1. > Install Python
 2. > pip install virtualenv
