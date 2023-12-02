@@ -1,5 +1,6 @@
 from django.db import models
 from users.models import Person
+from django.core.validators import MinValueValidator
 
 # Create your models here.
 class Event(models.Model):
@@ -15,7 +16,9 @@ class Event(models.Model):
 
     category = models.CharField(choices=CATEGORY_CHOICES, max_length=8)
     state = models.BooleanField(default=False)
-    nbrParticipants = models.IntegerField(default=0)
+    nbrParticipants = models.IntegerField(default=0, validators=[
+        MinValueValidator(0)
+    ])
     eventDate = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
